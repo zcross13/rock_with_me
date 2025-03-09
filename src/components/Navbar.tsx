@@ -1,36 +1,52 @@
+import { useState } from "react";
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
+
 // CustomLink Component with types
 interface CustomLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-    href: string;
+    to: string;
     children: React.ReactNode;
 }
 
-function CustomLink({ href, children, ...props }: CustomLinkProps) {
+function CustomLink({ to, children }: CustomLinkProps) {
 
-    const path = window.location.pathname
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({path: resolvedPath.pathname, end:true})
 
     return (
-        <li className={path === href ? "active" : ""}>
-            <a href={href} {...props}>
+        <li className={isActive ? "active" : ""}>
+            <Link to={to}>
                 {children}
-            </a>
+            </Link>
         </li>
     )
 }
 
 
 const Navbar = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control hamburger menu visibility
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
+
     return (
         <nav className="nav">
-            <a href="/" className="site-logo">Logo</a>
-            <ul>
-                <CustomLink href="/schedule-appointment"> Schedule Appointment</CustomLink>
-                <CustomLink href="/prices"> Prices </CustomLink>
-                <CustomLink href="/3d-ultrasound"> 3D Ultrasound</CustomLink>
-                <CustomLink href="/4d-ultrasound"> 4D Ultrasound</CustomLink>
-                <CustomLink href="/reviews"> Reviews</CustomLink>
-                <CustomLink href="/calendar"> Calendar</CustomLink>
-                <CustomLink href="/about-us"> About Us</CustomLink>
-                <CustomLink href="faq"> FAQs</CustomLink>
+            <Link to="/" className="site-logo">Logo</Link>
+            <button className="hamburger" onClick={toggleMenu} aria-label="Toggle Navigation">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+            </button>
+            <ul className={`nav-links ${isMenuOpen ? "open": ""}`}>
+                <CustomLink to="/schedule"> Scheduling Appointment</CustomLink>
+                <CustomLink to="/prices"> Prices </CustomLink>
+                <CustomLink to="/3d-ultrasound"> 3D Ultrasound</CustomLink>
+                <CustomLink to="/4d-ultrasound"> 4D Ultrasound</CustomLink>
+                <CustomLink to="/reviews"> Reviews</CustomLink>
+                <CustomLink to="/calendar"> Calendar</CustomLink>
+                <CustomLink to="/about-us"> About Us</CustomLink>
+                <CustomLink to="faq"> FAQs</CustomLink>
 
             </ul>
         </nav>

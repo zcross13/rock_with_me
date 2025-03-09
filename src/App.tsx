@@ -8,42 +8,25 @@ import Reviews from "./pages/Reviews";
 import Schedule from "./pages/Schedule-Appointment";
 import ThreeDUltrasound from "./pages/ThreeDUltrasound";
 import FourDUltrasound from "./pages/FourDUltrasound";
+import {Route,  Routes} from "react-router-dom"
 
 function App() {
-  let component
-  switch (window.location.pathname) {
-    case "/":
-      component = <Home/>
-      break
-    case "/schedule-appointment":
-      component = <Schedule/>
-      break
-    case "/prices":
-      component = <Prices/>
-      break
-    case "/3d-ultrasound":
-      component = <ThreeDUltrasound/>
-      break
-    case "/4d-ultrasound":
-      component = <FourDUltrasound/>
-      break
-    case "/reviews":
-      component = <Reviews/>
-      break
-    case "/calendar":
-      component = <Calendar/>
-      break
-    case "/about-us":
-      component = <About/>
-      break
-    case "/faq":
-      component = <FAQ/>
-      break
-  }
   return (
     <>
       <Navbar />
-      <div className="container"> {component}</div>
+      <div className="container"> 
+        <Routes>
+          <Route path="/" element={<Home/> } />
+          <Route path="/schedule" element={<Schedule/> } />
+          <Route path="/prices" element={<Prices/>} />
+          <Route path="/3d-ultrasound" element={<ThreeDUltrasound />} />
+          <Route path="/4d-ultrasound" element={<FourDUltrasound />}/>
+          <Route path="/reviews" element={<Reviews />}/>
+          <Route path="/calendar" element={<Calendar/>}/>
+          <Route path="/about-us" element={<About/>}/>
+          <Route path="/faq" element={<FAQ/>}/>
+        </Routes>
+      </div>
     </>
   )
 }
