@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import logo from  "../assets/logo.jpeg"
 
 // CustomLink Component with types
 interface CustomLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -32,7 +33,9 @@ const Navbar = () => {
 
     return (
         <nav className="nav">
-            <Link to="/" className="site-logo">Logo</Link>
+            <Link to="/" className="site-logo">
+                <img src={logo} alt="logo" className="site-logo"/>
+            </Link>
             <button className="hamburger" onClick={toggleMenu} aria-label="Toggle Navigation">
                 <span className="bar"></span>
                 <span className="bar"></span>
