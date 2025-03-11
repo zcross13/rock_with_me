@@ -34,7 +34,7 @@ const Navbar = () => {
     return (
         <nav className="nav">
             <Link to="/" className="site-logo">
-                <img src={logo} alt="logo" className="site-logo"/>
+                <img src={logo} alt="logo" className="logo"/>
             </Link>
             <button className="hamburger" onClick={toggleMenu} aria-label="Toggle Navigation">
                 <span className="bar"></span>

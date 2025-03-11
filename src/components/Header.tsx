@@ -1,15 +1,50 @@
-import SocialMediaLinks from "./SocialMediaLinks";
+import Slider from "react-slick";
+import img1 from "../assets/img1.jpg";
+import img2 from "../assets/img2.jpg";
+import img3 from "../assets/img3.jpg";
+import img4 from "../assets/img4.jpg";
+import img5 from "../assets/img5.jpg";
+import "../styles/header.css"
 
 const Header = () => {
 
   const handleButtonClick = () => {
     window.location.href = "https://app.acuityscheduling.com/schedule/057387c0"
   }
+
+  // Carousel Settings
+
+  const settings = {
+    dots: true, //show dots for naviation
+    infinite: true, // Infinite Scroll
+    speed: 500, 
+    slidesToShow: 1, //Show 1 slide at a time 
+    slidesToScroll: 1, //Scroll 1 slide at a time 
+    autoplay: true, //Enable autoplay
+    autoplaySpeed: 3000, // Set the speed of autoplay
+  }
+
   return (
-    <>
     <header className="header">
-      {/*Hero Section*/}
-      <div className="hero">
+      {/*Hero Section with Carousel*/}
+        <div className="hero">
+          <Slider {...settings}>
+            <div className="hero-slide">
+              <img src={img1} alt="Image 1" />
+            </div>
+            <div className="hero-slide">
+              <img src={img2} alt="Image 2" />
+            </div>
+            <div className="hero-slide">
+              <img src={img3} alt="Image 3" />
+            </div>
+            <div className="hero-slide">
+              <img src={img4} alt="Image 4" />
+            </div>
+            <div className="hero-slide">
+              <img src={img5} alt="Image 5" />
+            </div>
+          </Slider>
         <img />
         <div className="hero-content">
           <h1>Experence Cutting Edge 3D Ultrasound</h1>
@@ -29,36 +64,6 @@ const Header = () => {
         </div>
       </div>
     </header>
-
-    <section className="connect">
-      <div className="connect-content">
-          <h2>Connect With Me</h2>
-          <p>We're here to help! Reach out to us through any off the methods below:</p>
-          {/* Contact Infor */}
-          <div className="contact-info">
-            <div className="contact-item">
-              <h3>Phone</h3>
-              <p>832-631-6696</p>
-            </div>
-            <div className="contact-item">
-              <h3>Email</h3>
-              <p>info@example.com</p>
-            </div>
-          </div>
-          <SocialMediaLinks />
-          {/* Inquiry Form */}
-          <div className="inquiry-form">
-            <h3> Send Us a Message</h3>
-            <form>
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Your Message" required></textarea>
-              <button type="submit" className="cta-button">Submit</button>
-            </form>
-          </div>
-      </div>
-    </section>
-  </>
   )
 }
 
