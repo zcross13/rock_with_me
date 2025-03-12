@@ -49,6 +49,7 @@ const Header = () => {
         <div className="hero-content">
           <h1>Experence Cutting Edge 3D Ultrasound</h1>
           <p>Booking a 3D/4D ultrasound is an exiciting step in your pregnancy journey, offering a uniquie opportunity to see your baby in remarkable details. Unlike traditional 2D ultrasounds, 3D ultrasounds provide status three-dimensoal images, while n4d ultrasounds add the element of motion,a llowing you to watch your baby move in real-time. These ultrasounds can help creqate a stronger bond with your unborn child and offer a memorable keepsake for your family.</p>
+          <p>You’re just an appointment away from an unforgettable moment!</p>
             <div className="cta-buttons-container">
               <button
               className="cta-button">

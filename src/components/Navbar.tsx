@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import logo from  "../assets/logo.jpeg"
+import logo from "../assets/logo.jpeg"
+import "../styles/navbar.css"
 
 // CustomLink Component with types
 interface CustomLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -31,6 +32,11 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen)
     }
 
+
+  const handleButtonClick = () => {
+    window.location.href = "https://app.acuityscheduling.com/schedule/057387c0"
+  }
+
     return (
         <nav className="nav">
             <Link to="/" className="site-logo">
@@ -41,16 +47,17 @@ const Navbar = () => {
                 <span className="bar"></span>
                 <span className="bar"></span>
             </button>
-            <ul className={`nav-links ${isMenuOpen ? "open": ""}`}>
-                <CustomLink to="/schedule"> Scheduling Appointment</CustomLink>
-                <CustomLink to="/prices"> Prices </CustomLink>
-                <CustomLink to="/3d-ultrasound"> 3D Ultrasound</CustomLink>
-                <CustomLink to="/4d-ultrasound"> 4D Ultrasound</CustomLink>
-                <CustomLink to="/reviews"> Reviews</CustomLink>
-                <CustomLink to="/calendar"> Calendar</CustomLink>
+            <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
                 <CustomLink to="/about-us"> About Us</CustomLink>
+                <CustomLink to="/prices"> Prices </CustomLink>
+                <CustomLink to="/reviews"> Reviews</CustomLink>
                 <CustomLink to="faq"> FAQs</CustomLink>
-
+                <CustomLink to="/contact"> Contact Me</CustomLink>
+                <button
+              onClick={handleButtonClick}
+                className="cta-button">
+                Book an Appointment
+            </button>
             </ul>
         </nav>
     )
