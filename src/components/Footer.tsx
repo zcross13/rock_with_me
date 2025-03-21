@@ -1,13 +1,14 @@
-import SocialMediaLinks from "./SocialMediaLinks";
-import "../styles/footer.css";
+import SocialMediaLinks from './SocialMediaLinks';
+import '../styles/footer.css';
 
 const Footer = () => {
-    return (
-        
+  return (
     <section className="connect">
-    <div className="connect-content">
+      <div className="connect-content">
         <h2>Connect With Me</h2>
-        <p>We're here to help! Reach out to us through any off the methods below:</p>
+        <p>
+          We're here to help! Reach out to us through any off the methods below:
+        </p>
         {/* Contact Infor */}
         <div className="contact-info">
           <div className="contact-item">
@@ -27,12 +28,14 @@ const Footer = () => {
             <input type="text" placeholder="Your Name" required />
             <input type="email" placeholder="Your Email" required />
             <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" className="cta-button">Submit</button>
+            <button type="submit" className="cta-button">
+              Submit
+            </button>
           </form>
         </div>
-    </div>
-  </section>
-    )
-}
+      </div>
+    </section>
+  );
+};
 
-export default Footer; 
+export default Footer;

@@ -1,13 +1,12 @@
-import Header from "../components/Header";
-import "../styles/header.css"
-
+import Header from '../components/Header';
+import '../styles/header.css';
 
 function Home() {
-    return (
-        <div>
-            <Header />
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
 
-export default Home; 
+export default Home;

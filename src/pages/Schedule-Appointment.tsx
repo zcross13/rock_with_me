@@ -1,7 +1,5 @@
 function Schedule() {
-    return (
-        <h1>Schedule Appointmnet</h1>
-    )
+  return <h1>Schedule Appointmnet</h1>;
 }
 
-export default Schedule; 
+export default Schedule;
