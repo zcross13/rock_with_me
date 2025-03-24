@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useMatch, useResolvedPath, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.jpeg';
 import '../styles/navbar.css';
 
@@ -23,6 +23,7 @@ function CustomLink({ to, children }: CustomLinkProps) {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control hamburger menu visibility
+  const location = useLocation(); // Access location to track route changes
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -35,6 +36,11 @@ const Navbar = () => {
   const handleButtonClick = () => {
     window.location.href = 'https://app.acuityscheduling.com/schedule/057387c0';
   };
+
+  // Close the menu when the location changes (new page loaded)
+  useEffect(() => {
+    setIsMenuOpen(false); // Close the menu when the page changes
+  }, [location]);
 
   return (
     <nav className="nav">
