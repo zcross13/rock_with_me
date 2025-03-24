@@ -1,116 +1,101 @@
-/* Hero Section */
-.header {
+/* Add some default styling to ensure consistency */
+header {
   position: relative;
-  overflow: hidden; /* Ensures the hero section doesn't overflow */
+  overflow: hidden;
 }
 
 .hero {
-  position: relative;
   width: 100%;
-  height: 500px; /* Adjust the height as necessary */
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.hero-slide {
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(186, 85, 211, 0.7),
+    rgba(169, 169, 169, 0.5)
+  ); /* Mauve to light gray gradient */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.hero-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the container */
-  object-position: center; /* Keeps the image centered */
+  text-align: center;
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 90%;
-  z-index: 1; /* Make sure the content stays on top of images */
+  color: #006d5b; /* Dark Teal for the text */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Call to Action Buttons */
+h1 {
+  font-size: 3.5rem; /* Bigger text size */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Stronger text shadow */
+  color: #006d5b; /* Dark Teal for the heading */
+}
+
+p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Stronger text shadow */
+  color: #333; /* Dark gray text for readability */
+}
+
 .cta-buttons-container {
   display: flex;
-  align-items: center;
-  gap: 2rem;
   justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.or-text {
-  margin: 0;
-  font-size: 1.2rem;
+  align-items: center;
+  gap: 20px;
 }
 
 .cta-button {
-  padding: 10px 20px;
-  background-color: rgb(205, 123, 158);
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #006d5b; /* Dark Teal for buttons */
   color: white;
-  text-decoration: none;
-  font-size: 1.25rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border: 1px solid #c0c0c0; /* Silver border for buttons */
   cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .cta-button:hover {
-  background-color: rgb(0, 128, 128);
+  background-color: #4d9a8c; /* Light Teal for hover */
+  border-color: #c0c0c0; /* Silver border stays */
 }
 
-/* Responsive Design */
+.or-text {
+  color: #c0c0c0; /* Silver for the separator */
+  font-size: 1.2rem;
+}
+
 @media (max-width: 768px) {
-  .hero {
-    height: 400px; /* Adjust the height for tablets and smaller screens */
+  h1 {
+    font-size: 2.8rem;
   }
 
-  .hero-content {
-    padding: 1.5rem;
-    max-width: 85%;
+  p {
+    font-size: 1.1rem;
   }
 
   .cta-buttons-container {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
-    gap: 1rem;
+    flex-direction: column;
   }
 
   .cta-button {
-    font-size: 1.1rem; /* Reduce button text size for mobile */
-    padding: 12px 24px; /* Make buttons a bit larger for easier tapping */
-  }
-
-  .or-text {
-    font-size: 1rem; /* Smaller text size for the "or" text */
-  }
-}
-
-/* Extra Small Devices (phones in portrait mode) */
-@media (max-width: 480px) {
-  .hero {
-    height: 300px; /* Reduce height on smaller phones */
-  }
-
-  .hero-content {
-    padding: 1rem;
-    max-width: 80%;
-  }
-
-  .cta-button {
-    font-size: 1rem; /* Even smaller button text size */
-    padding: 10px 20px;
-  }
-
-  .or-text {
-    font-size: 0.9rem; /* Adjust "or" text for smaller screens */
+    width: 100%;
+    padding: 12px;
   }
 }

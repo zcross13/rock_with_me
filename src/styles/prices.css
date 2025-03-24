@@ -19,21 +19,22 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* Change from flex-start to center for centering the list */
   gap: 2rem;
-  margin-left: 5%;
+  width: 100%; /* Ensure full width */
   justify-content: center;
 }
 
 /* Price Item Styling */
 .price-item {
-  width: 100%; /* Changed to 100% to ensure full-width on smaller screens */
+  width: 100%; /* Ensures full width on smaller screens */
   max-width: 600px; /* Limit width for larger screens */
   background-color: rgb(245, 245, 245);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform for hover */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin: 0 auto; /* Centers the price item horizontally */
 }
 
 .price-item:hover {
@@ -94,12 +95,14 @@
   .price-list {
     margin-left: 0;
     gap: 1.5rem;
+    justify-content: center; /* Ensure items are centered */
+    align-items: center; /* Center the items */
   }
 
   .price-item {
     width: 100%;
     max-width: 100%; /* Full width for price items */
-    margin: 0 auto;
+    margin: 0 auto; /* Ensure the price item is centered */
   }
 
   .price-item h2 {
@@ -133,6 +136,7 @@
   .price-item {
     width: 100%; /* Ensure each price item takes up full width */
     padding: 1rem;
+    margin: 0 auto; /* Center the price item */
   }
 
   .price-item h2 {
