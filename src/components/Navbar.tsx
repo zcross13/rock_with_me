@@ -28,13 +28,17 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false); // Close the menu when a link is clicked
+  };
+
   const handleButtonClick = () => {
     window.location.href = 'https://app.acuityscheduling.com/schedule/057387c0';
   };
 
   return (
     <nav className="nav">
-      <Link to="/" className="site-logo">
+      <Link to="/" className="site-logo" onClick={closeMenu}>
         <img src={logo} alt="logo" className="logo" />
       </Link>
       <button
@@ -47,11 +51,11 @@ const Navbar = () => {
         <span className="bar"></span>
       </button>
       <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        <CustomLink to="/about-us"> About Us</CustomLink>
-        <CustomLink to="/prices"> Prices </CustomLink>
+        <CustomLink to="/about-us" onClick={closeMenu}> About Us</CustomLink>
+        <CustomLink to="/prices" onClick={closeMenu}> Prices </CustomLink>
         {/* <CustomLink to="/reviews"> Reviews</CustomLink> */}
-        <CustomLink to="faq"> FAQs</CustomLink>
-        <CustomLink to="/contact"> Contact Me</CustomLink>
+        <CustomLink to="/faq" onClick={closeMenu}> FAQs</CustomLink>
+        <CustomLink to="/contact" onClick={closeMenu}> Contact Me</CustomLink>
         <button onClick={handleButtonClick} className="cta-button">
           Book an Appointment
         </button>
