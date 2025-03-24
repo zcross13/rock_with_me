@@ -3,15 +3,18 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Vite handles static assets in the public directory -->
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + React + TS</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Vite + React + TypeScript</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 </head>
 
 <body>
+  <!-- The root div where React will mount the app -->
   <div id="root"></div>
-  <!-- Vite will inject the correct script during the build process -->
+
+  <!-- Vite injects the script dynamically during development/build -->
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
