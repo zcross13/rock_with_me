@@ -6,7 +6,7 @@ header {
 
 .hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Change to min-height to prevent content from being cut off */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -34,6 +34,7 @@ header {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  overflow: hidden;
 }
 
 h1 {
@@ -57,6 +58,8 @@ p {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  padding: 20px;
 }
 
 .cta-button {
@@ -83,11 +86,11 @@ p {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.8rem;
+    font-size: 2.8rem; /* Adjust heading size for smaller screens */
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Adjust paragraph text size for smaller screens */
   }
 
   .cta-buttons-container {
@@ -95,7 +98,29 @@ p {
   }
 
   .cta-button {
+    width: 100%; /* Ensure buttons take up full width on mobile */
+    padding: 12px;
+    font-size: 1.1rem; /* Slightly smaller font size for buttons */
+  }
+
+  .hero-content {
+    padding: 15px; /* Adjust padding inside hero content on smaller screens */
+  }
+}
+
+/* Mobile Menu Adjustments */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem; /* Slightly smaller font size for very small screens */
+  }
+
+  .cta-button {
     width: 100%;
     padding: 12px;
+    font-size: 1.1rem; /* Make buttons slightly smaller */
+  }
+
+  .cta-buttons-container {
+    padding: 10px; /* Reduce container padding */
   }
 }
