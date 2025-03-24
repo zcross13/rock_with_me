@@ -67,3 +67,50 @@
 .cta-button:hover {
   background-color: rgb(0, 128, 128);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 400px; /* Adjust the height for tablets and smaller screens */
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+    max-width: 85%;
+  }
+
+  .cta-buttons-container {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1.1rem; /* Reduce button text size for mobile */
+    padding: 12px 24px; /* Make buttons a bit larger for easier tapping */
+  }
+
+  .or-text {
+    font-size: 1rem; /* Smaller text size for the "or" text */
+  }
+}
+
+/* Extra Small Devices (phones in portrait mode) */
+@media (max-width: 480px) {
+  .hero {
+    height: 300px; /* Reduce height on smaller phones */
+  }
+
+  .hero-content {
+    padding: 1rem;
+    max-width: 80%;
+  }
+
+  .cta-button {
+    font-size: 1rem; /* Even smaller button text size */
+    padding: 10px 20px;
+  }
+
+  .or-text {
+    font-size: 0.9rem; /* Adjust "or" text for smaller screens */
+  }
+}

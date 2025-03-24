@@ -54,3 +54,61 @@
 .inquiry-form button:hover {
   background-color: rgb(0, 128, 128);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column; /* Stack contact items vertically */
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .contact-item {
+    min-width: 100%; /* Ensure contact items take full width on smaller screens */
+    flex: 1;
+  }
+
+  .inquiry-form form {
+    max-width: 100%;
+    padding: 0 1rem; /* Add padding for form on mobile */
+  }
+
+  .inquiry-form input,
+  .inquiry-form textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .inquiry-form button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Devices (phones in portrait mode) */
+@media (max-width: 480px) {
+  .contact-info {
+    gap: 1rem; /* Reduce gap between items */
+    margin-top: 1rem;
+  }
+
+  .contact-item {
+    min-width: 100%;
+    flex: 1;
+  }
+
+  .inquiry-form form {
+    padding: 0 1rem;
+  }
+
+  .inquiry-form input,
+  .inquiry-form textarea {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .inquiry-form button {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+}

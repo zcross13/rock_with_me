@@ -1,6 +1,7 @@
+/* Review Form Styling */
 .review-form {
-  width: 150%;
-  max-width: 500px;
+  width: 100%; /* Set width to 100% for responsive design */
+  max-width: 500px; /* Maximum width of the form */
   margin: 0 auto;
   padding: 20px;
   background-color: #f9f9f9;
@@ -8,7 +9,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Lavel Styling */
+/* Label Styling */
 .review-form label {
   font-size: 16px;
   font-weight: bold;
@@ -17,7 +18,7 @@
   display: block;
 }
 
-/*Input and Textarea Styling  */
+/* Input and Textarea Styling */
 .review-form input,
 .review-form select,
 .review-form textarea {
@@ -35,7 +36,7 @@
   resize: vertical;
 }
 
-/*Button Styling */
+/* Button Styling */
 .review-form button {
   width: 100%;
   padding: 12px;
@@ -48,22 +49,66 @@
   transition: background-color 0.3s ease;
 }
 
-/*Button Hover Effect */
+/* Button Hover Effect */
 .review-form button:hover {
   background-color: #218838;
 }
 
 /* Input Focus Styles */
-.review-form form input:focus,
+.review-form input:focus,
 .review-form select:focus,
 .review-form textarea:focus {
   border-color: #28a745;
   outline: none;
 }
 
-/*Adding some margin between form fields */
+/* Adding some margin between form fields */
 .review-form input,
 .review-form select,
 .review-form textarea {
   margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .review-form {
+    padding: 15px; /* Slightly reduced padding for smaller screens */
+  }
+
+  .review-form label {
+    font-size: 14px; /* Slightly smaller label font on mobile */
+  }
+
+  .review-form input,
+  .review-form select,
+  .review-form textarea {
+    font-size: 14px; /* Slightly smaller font size for inputs */
+  }
+
+  .review-form button {
+    font-size: 16px; /* Smaller button text on mobile */
+    padding: 10px; /* Reduced padding for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .review-form {
+    width: 100%; /* Ensure form takes up full width on very small screens */
+    padding: 10px; /* Reduced padding for very small screens */
+  }
+
+  .review-form label {
+    font-size: 13px; /* Adjusting label font for very small screens */
+  }
+
+  .review-form input,
+  .review-form select,
+  .review-form textarea {
+    font-size: 13px; /* Slightly smaller font size for inputs */
+  }
+
+  .review-form button {
+    font-size: 15px; /* Adjust button size for very small screens */
+    padding: 9px; /* Slightly smaller padding for small screens */
+  }
 }

@@ -74,9 +74,45 @@
 
   .faq-question {
     font-size: 1rem;
+    padding: 0.5rem;
   }
 
   .faq-answer {
     font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .faq-item {
+    padding: 0.8rem 0;
+  }
+}
+
+/* Extra Small Devices (phones in portrait mode) */
+@media (max-width: 480px) {
+  .faq-container {
+    padding: 0.5rem;
+  }
+
+  .faq h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  .faq-answer {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .faq-item {
+    padding: 0.6rem 0;
+  }
+
+  .faq-question span {
+    font-size: 1.3rem;
   }
 }

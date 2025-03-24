@@ -3,7 +3,6 @@ import About from './pages/About-me';
 import FAQ from './pages/FAQ';
 import Home from './pages/Home';
 import Prices from './pages/Prices';
-import Reviews from './pages/Reviews';
 // import Schedule from "./pages/Schedule-Appointment";
 // import ThreeDUltrasound from "./pages/ThreeDUltrasound";
 // import FourDUltrasound from "./pages/FourDUltrasound";
@@ -21,7 +20,6 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/" element={<Home />} />
           <Route path="/prices" element={<Prices />} />
-          <Route path="/reviews" element={<Reviews />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

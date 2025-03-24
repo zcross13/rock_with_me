@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,6 +33,7 @@ body {
   border-radius: 5px;
 }
 
+/* Navigation Links Styles */
 .nav-links {
   display: flex;
   gap: 1rem;
@@ -42,15 +44,14 @@ body {
   display: block;
 }
 
-/* Header section styling */
+/* Header Section Styling */
 .header {
   width: 100%;
   height: 100vh;
   position: relative;
 }
 
-/* Header image styling*/
-
+/* Hero Section Styling */
 .hero {
   position: relative;
   width: 100%;
@@ -64,7 +65,7 @@ body {
   filter: brightness(0.6);
 }
 
-/* Content overlay for the hero section */
+/* Content Overlay for Hero Section */
 .hero-content {
   position: absolute;
   top: 50%;
@@ -84,7 +85,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* SocialMediaLinks.css */
+/* Social Media Links Styling */
 .social-links {
   margin-top: 2rem;
 }
@@ -101,6 +102,7 @@ body {
   color: rgb(205, 123, 158); /* Hover color */
 }
 
+/* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column; /* Stack items vertically on smaller screens */
@@ -108,14 +110,15 @@ body {
     padding: 1rem;
   }
 
-  .nav ul {
-    flex-direction: column; /* Stack the links vertically */
+  /* Stack the navigation links vertically */
+  .nav-links {
+    flex-direction: column;
     display: none;
     width: 100%;
   }
 
-  .nav ul.open {
-    display: block;
+  .nav-links.open {
+    display: block; /* Display navigation links when open */
   }
 
   .hamburger {
@@ -138,6 +141,6 @@ body {
 
   .cta-button {
     font-size: 1rem;
-    padding: 0.5 rem 1.5rem;
+    padding: 0.5rem 1.5rem; /* Fixed padding typo */
   }
 }

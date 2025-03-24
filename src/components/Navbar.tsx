@@ -49,7 +49,7 @@ const Navbar = () => {
       <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <CustomLink to="/about-us"> About Us</CustomLink>
         <CustomLink to="/prices"> Prices </CustomLink>
-        <CustomLink to="/reviews"> Reviews</CustomLink>
+        {/* <CustomLink to="/reviews"> Reviews</CustomLink> */}
         <CustomLink to="faq"> FAQs</CustomLink>
         <CustomLink to="/contact"> Contact Me</CustomLink>
         <button onClick={handleButtonClick} className="cta-button">
