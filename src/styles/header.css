@@ -6,7 +6,7 @@ header {
 
 .hero {
   width: 100%;
-  min-height: 100vh; /* Change to min-height to prevent content from being cut off */
+  min-height: 100vh; /* Ensure full height of the viewport */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -35,6 +35,7 @@ header {
   margin: 0 auto;
   padding: 20px;
   overflow: hidden;
+  text-align: center; /* Center text content for smaller screens */
 }
 
 h1 {
@@ -95,6 +96,7 @@ p {
 
   .cta-buttons-container {
     flex-direction: column;
+    gap: 15px; /* Reduce gap between buttons */
   }
 
   .cta-button {
@@ -105,6 +107,11 @@ p {
 
   .hero-content {
     padding: 15px; /* Adjust padding inside hero content on smaller screens */
+  }
+
+  /* Prevent cut-off content on small screens */
+  .hero-overlay {
+    padding: 0 10px; /* Add horizontal padding to prevent edges from getting cut off */
   }
 }
 
@@ -122,5 +129,15 @@ p {
 
   .cta-buttons-container {
     padding: 10px; /* Reduce container padding */
+  }
+
+  /* Prevent cut-off of content */
+  .hero-content {
+    padding: 10px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Ensure content fits fully */
+  }
+
+  .hero-overlay {
+    padding: 0 5px; /* More padding adjustments to prevent cut-off */
   }
 }
