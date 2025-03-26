@@ -1,7 +1,16 @@
 import '../styles/about.css'; // Make sure you create and link your CSS file
 import SocialMediaLinks from '../components/SocialMediaLinks';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact')
+  }
+  
+  
   return (
     <div className="about-container">
       <header className="about-header">
@@ -27,23 +36,23 @@ const About = () => {
       <section className="mission-section">
         <h2>My Mission</h2>
         <p>
-          My mission is to [mission statement]. I believe in [values, e.g.,
-          delivering high-quality, compassionate service].
+        At Rock With Me in 4D, our mission is to create unforgettable moments by bringing families closer to their little miracles. Through the magic of 3D and 4D ultrasound technology, we provide a warm, welcoming environment where expecting parents can bond with their baby and cherish memories that last a lifetime. We are dedicated to delivering a joyful, personalized experience filled with love, laughter, and lasting impressions.
         </p>
       </section>
 
-      <section className="story-section">
+      {/* To be added later */}
+      {/* <section className="story-section">
         <h2>How I Got Started</h2>
         <p>
           It all started when I [tell your story—why you got into this field,
           what motivated you, any important milestones].
         </p>
-      </section>
+      </section> */}
 
       <section className="contact-section">
         <h2>Get in Touch</h2>
         <p>Have questions or want to book an appointment? Reach out to me!</p>
-        <button className="cta-button">Contact Me</button>
+        <button onClick={handleContactClick } className="cta-button">Contact Me</button>
       </section>
 
       <section className="social-media-links">

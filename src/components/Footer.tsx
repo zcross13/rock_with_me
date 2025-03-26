@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
           <div className="contact-item">
             <h3>Email</h3>
-            <p>info@example.com</p>
+            <p>deann@dynamicvueimaging.com</p>
           </div>
         </div>
         <SocialMediaLinks />
