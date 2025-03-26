@@ -1,60 +1,95 @@
-/* Prices Page */
+/* General Styles */
 .prices-page {
   padding: 3rem;
   text-align: center;
+  background-color: #f5f5f5; /* Light silver background */
 }
 
 .prices-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #005f5f; /* Dark Teal */
+  font-family: "Poppins", sans-serif; /* Elegant font */
 }
 
 .prices-header p {
   font-size: 1.2rem;
-  color: gray;
+  color: #8e8e8e; /* Soft silver gray */
   margin-bottom: 2rem;
+  font-family: "Arial", sans-serif;
+}
+
+/* Layout for Two Businesses */
+.business-section {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.business-header h2 {
+  font-size: 2rem;
+  color: #9b4d57; /* Mauve */
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif; /* Elegant font */
+}
+
+/* Flexbox for two business sections */
+.prices-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.business-section {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
 }
 
 .price-list {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Change from flex-start to center for centering the list */
-  gap: 2rem;
-  width: 100%; /* Ensure full width */
-  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 /* Price Item Styling */
 .price-item {
-  width: 100%; /* Ensures full width on smaller screens */
-  max-width: 600px; /* Limit width for larger screens */
-  background-color: rgb(245, 245, 245);
+  width: 100%;
+  max-width: 600px;
+  background-color: #f8f8f8; /* Light silver background */
   padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  margin: 0 auto; /* Centers the price item horizontally */
+  margin: 0 auto;
 }
 
 .price-item:hover {
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Hover effect for interactivity */
-  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Lighter shadow on hover */
+  transform: translateY(-5px);
 }
 
 .price-item h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: rgb(40, 86, 118); /* Slightly darker color for headings */
+  color: #005f5f; /* Dark teal for the title */
+  font-family: "Poppins", sans-serif;
 }
 
 .price-item p {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 1rem 0;
-  color: rgb(0, 128, 128);
+  color: #9b4d57; /* Mauve for price text */
 }
 
+/* Additional Services List Styling */
 .additional-services {
   list-style-type: none;
   padding-left: 0;
@@ -63,7 +98,7 @@
 .additional-services li {
   font-size: 1.1rem;
   margin: 0.5rem 0;
-  color: #333; /* Darker text for readability */
+  color: #333; /* Dark gray for readability */
 }
 
 /* Call to Action Button */
@@ -73,36 +108,62 @@
 
 .cta-button {
   padding: 1rem 2rem;
-  background-color: rgb(205, 123, 158);
+  background-color: #005f5f; /* Dark teal button */
   color: white;
   font-size: 1.2rem;
-  border-radius: 5px;
+  border-radius: 30px; /* Soft rounded edges */
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: rgb(0, 128, 128);
-  transform: scale(1.05); /* Slight scaling effect on hover */
+  background-color: #007373; /* Slightly lighter teal on hover */
+  transform: scale(1.05);
 }
 
-/* Responsive Design */
+/* Dropdown Toggle Button */
+.dropdown-toggle {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #9b4d57; /* Mauve button */
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: #b56a73; /* Slightly darker mauve on hover */
+}
+
+/* Responsive Design for Large Screens (Desktop) */
+@media (min-width: 1024px) {
+  .prices-page {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .business-section {
+    width: 45%;
+  }
+}
+
+/* Responsive Design for Small Screens (Tablets/Mobile) */
 @media (max-width: 768px) {
   .prices-page {
     padding: 2rem 1rem;
   }
 
-  .price-list {
-    margin-left: 0;
-    gap: 1.5rem;
-    justify-content: center; /* Ensure items are centered */
-    align-items: center; /* Center the items */
+  .business-section {
+    width: 100%;
   }
 
   .price-item {
     width: 100%;
-    max-width: 100%; /* Full width for price items */
-    margin: 0 auto; /* Ensure the price item is centered */
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .price-item h2 {
@@ -121,29 +182,29 @@
 
 @media (max-width: 480px) {
   .prices-header h1 {
-    font-size: 2rem; /* Smaller heading size for smaller screens */
+    font-size: 2rem;
   }
 
   .prices-header p {
-    font-size: 1rem; /* Adjust paragraph font size for mobile */
+    font-size: 1rem;
   }
 
   .cta-button {
     font-size: 1rem;
-    padding: 0.8rem 1.5rem; /* Slightly smaller button size for small screens */
+    padding: 0.8rem 1.5rem;
   }
 
   .price-item {
-    width: 100%; /* Ensure each price item takes up full width */
+    width: 100%;
     padding: 1rem;
-    margin: 0 auto; /* Center the price item */
+    margin: 0 auto;
   }
 
   .price-item h2 {
-    font-size: 1.6rem; /* Adjust heading size for smaller screens */
+    font-size: 1.6rem;
   }
 
   .price-item p {
-    font-size: 1.2rem; /* Adjust price text size for smaller screens */
+    font-size: 1.2rem;
   }
 }

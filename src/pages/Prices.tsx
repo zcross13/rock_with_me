@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import '../styles/prices.css'; // Import your custom CSS for the price page
 
 const Prices = () => {
+  // State to handle opening and closing of dropdowns
+  const [business1Dropdown, setBusiness1Dropdown] = useState(false);
+  const [business2Dropdown, setBusiness2Dropdown] = useState(false);
+
+  // Toggle functions for dropdowns
+  const toggleBusiness1Dropdown = () => setBusiness1Dropdown(!business1Dropdown);
+  const toggleBusiness2Dropdown = () => setBusiness2Dropdown(!business2Dropdown);
+
   return (
     <div className="prices-page">
       <header className="prices-header">
@@ -11,131 +20,62 @@ const Prices = () => {
         </p>
       </header>
 
-      <section className="price-list">
-        {/* 3D Ultrasound */}
-        <div className="price-item">
-          <h2>3D Ultrasound</h2>
-          <p className="price">$150</p>
-          <p>
-            Capture high-quality 3D images of your baby in the womb. Perfect for
-            expecting parents looking to get a glimpse of their little one.
-          </p>
+      {/* Pricing for Business 1 */}
+      <section className="business-section">
+        <div className="business-header">
+          <h2>Business 1 - Ultrasound Services</h2>
+          <button onClick={toggleBusiness1Dropdown} className="dropdown-toggle">
+            {business1Dropdown ? 'Hide Services' : 'Show Services'}
+          </button>
         </div>
-        
+        {business1Dropdown && (
+          <div className="price-list">
+            {/* 3D Ultrasound */}
+            <div className="price-item">
+              <h2>3D Ultrasound</h2>
+              <p className="price">$150</p>
+              <p>Capture high-quality 3D images of your baby in the womb.</p>
+            </div>
 
-        {/* 4D Ultrasound */}
-        <div className="price-item">
-          <h2>4D Ultrasound</h2>
-          <p className="price">$200</p>
-          <p>
-            Experience the joy of seeing your baby in motion with a 4D
-            ultrasound. Watch them move, kick, and even yawn!
-          </p>
-        </div>
+            {/* 4D Ultrasound */}
+            <div className="price-item">
+              <h2>4D Ultrasound</h2>
+              <p className="price">$200</p>
+              <p>Experience the joy of seeing your baby in motion with a 4D ultrasound.</p>
+            </div>
 
-        {/* Additional Services */}
-        <div className="price-item">
-          <h2>Additional Services</h2>
-          <ul className="additional-services">
-            <li>Extra Prints: $25</li>
-            <li>DVD Recording: $30</li>
-            <li>Gender Reveal Package: $50</li>
-            <li>Heartbeat Recording: $20</li>
-            <li>Photo Album: $45</li>
-            <li>Baby Footprints: $15</li>
-            <li>Live Stream Option: $100</li>
-            {/* Add more services here */}
-          </ul>
+            {/* Additional services */}
+          </div>
+        )}
+      </section>
+
+      {/* Pricing for Business 2 */}
+      <section className="business-section">
+        <div className="business-header">
+          <h2>Business 2 - Medical Services</h2>
+          <button onClick={toggleBusiness2Dropdown} className="dropdown-toggle">
+            {business2Dropdown ? 'Hide Services' : 'Show Services'}
+          </button>
         </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Liver</h2>
-          <p className="price">$125</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Gallbladder</h2>
-          <p className="price">$125</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Kidney</h2>
-          <p className="price">$125</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Pelvic</h2>
-          <p className="price">$125</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Trans-Vaginal</h2>
-          <p className="price">$125</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Abdomen Complete</h2>
-          <p className="price">$130</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Obesterical 2nd trimester Multigestation</h2>
-          <p className="price">$180</p>
-          <p>Description for additional service 2...</p>
-        </div>
-        <div className="price-item">
-          <h2>Biophsyical Profile</h2>
-          <p className="price">$75</p>
-        </div>
+        {business2Dropdown && (
+          <div className="price-list">
+            {/* Abdomen Complete */}
+            <div className="price-item">
+              <h2>Abdomen Complete</h2>
+              <p className="price">$130</p>
+              <p>Comprehensive ultrasound for the abdomen area.</p>
+            </div>
+
+            {/* Liver Ultrasound */}
+            <div className="price-item">
+              <h2>Liver Ultrasound</h2>
+              <p className="price">$125</p>
+              <p>Ultrasound scan for liver examination.</p>
+            </div>
+
+            {/* Additional services */}
+          </div>
+        )}
       </section>
 
       <section className="cta-container">
