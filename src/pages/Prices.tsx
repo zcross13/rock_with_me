@@ -7,15 +7,15 @@ const Prices = () => {
   // State to handle opening and closing of dropdowns for each business
   const [business1Dropdown, setBusiness1Dropdown] = useState(false);
   const [business2Dropdown, setBusiness2Dropdown] = useState(false);
-  const [additionalBabies, setAdditionalBabies] = useState(0)
+  // const [additionalBabies, setAdditionalBabies] = useState(0)
 
   // Toggle function for business 1 dropdown
   const toggleBusiness1Dropdown = () => setBusiness1Dropdown(!business1Dropdown);
   const toggleBusiness2Dropdown = () => setBusiness2Dropdown(!business2Dropdown);
   
-  const calculatePrice = (basePrice, additionalPricePerBaby) => {
-    return basePrice + additionalBabies * additionalBabies; 
-  }
+  // const calculatePrice = (basePrice, additionalPricePerBaby) => {
+  //   return basePrice + additionalBabies * additionalBabies; 
+  // }
 
   return (
     <div className="prices-page">
