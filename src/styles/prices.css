@@ -20,12 +20,36 @@
 }
 
 /* Layout for Two Businesses */
+.business-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .business-section {
   background-color: #ffffff;
   padding: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 40px;
   border-radius: 12px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.business-header img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.business-logo {
+  width: 120px;
+  height: auto;
+  object-fit: content;
+  margin: 0 10px;
 }
 
 .business-header h2 {
@@ -124,7 +148,7 @@
 /* Dropdown Toggle Button */
 .dropdown-toggle {
   margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
+  padding: 10px 20px;
   background-color: #9b4d57; /* Mauve button */
   color: white;
   font-size: 1.2rem;
@@ -136,6 +160,15 @@
 
 .dropdown-toggle:hover {
   background-color: #b56a73; /* Slightly darker mauve on hover */
+}
+
+.dropdown-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0blue, 0.1);
+  margin-top: 15px;
 }
 
 /* Responsive Design for Large Screens (Desktop) */
@@ -206,5 +239,9 @@
 
   .price-item p {
     font-size: 1.2rem;
+  }
+
+  .business-logo {
+    width: 100px;
   }
 }
