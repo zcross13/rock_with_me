@@ -1,77 +1,93 @@
-/* Main Navbar Style */
-.nav {
-  background-color: rgb(40, 86, 118);
-  color: white;
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+
+/* General Navbar Styles */
+.navbar {
+  background-color: #2c3e50;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  padding: 1rem 2rem; /* Increased padding for more space */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
   position: relative;
-  width: 100%; /* Ensure the navbar takes full width */
-  box-sizing: border-box; /* Ensure padding doesn't overflow */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.site-logo {
-  font-size: 2.5rem;
+/* Container for the two logos */
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Take up full width */
+  max-width: 600px; /* Limit the total width of the logo section */
+}
+
+.logo {
+  flex-grow: 0; /* Prevent logos from growing */
+  width: 45%; /* Each logo takes up 45% of the container's width */
+  text-align: center; /* Center logo */
+}
+
+.logo-business1 a,
+.logo-business2 a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
   font-weight: bold;
-  letter-spacing: 1px;
-  color: rgb(255, 255, 255);
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 0;
-  transition: transform 0.3s ease;
-  max-width: 100%; /* Ensure logo doesn't overflow */
+  display: inline-block;
 }
 
-.site-logo img {
-  height: 100px;
-  width: auto;
-  border-radius: 8px; /* Rounded logo edges */
-  transition: transform 0.3s ease;
+/* Add specific logo styles if needed */
+.logo-business1 a {
+  font-family: "Dancing Script", cursive;
+  color: #ff6f61; /* Color for Business 1 */
 }
 
-.site-logo img:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
+.logo-business2 a {
+  font-family: "Dancing Script", cursive;
+  color: #8e44ad; /* Color for Business 2 (adjust as needed) */
 }
 
+/* Navigation Links */
 .nav-links {
+  font-family: "Lora", serif;
   display: flex;
-  align-items: center;
-  gap: 2rem;
   list-style: none;
-  padding: 0;
   margin: 0;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-  justify-content: center; /* Center the nav items */
+  padding: 0;
 }
 
 .nav-links li {
-  position: relative;
+  margin-left: 2rem;
 }
 
 .nav-links a {
-  color: inherit;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-  background-color: rgb(205, 123, 158);
-  transform: scale(1.05); /* Slight scale effect on hover */
+  background-color: #34495e;
+  border-radius: 4px;
 }
 
-.nav-links li.active a {
-  background-color: rgb(205, 123, 158);
+/* CTA Button Styling */
+.cta-button {
+  background-color: #ff6f61; /* Soft, girly color */
   color: white;
-  transform: scale(1.05); /* Slight scale effect on active link */
-  border-bottom: 3px solid rgb(205, 123, 158); /* Underline active link */
-  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 2rem; /* Space it from the other links */
+}
+
+.cta-button:hover {
+  background-color: #ff8a75; /* Darken on hover */
 }
 
 /* Hamburger Menu */
@@ -79,6 +95,8 @@
   display: none;
   flex-direction: column;
   gap: 4px;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
@@ -89,6 +107,7 @@
   transition: transform 0.3s ease;
 }
 
+/* Hamburger animation when clicked */
 .hamburger.active .bar:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
@@ -101,16 +120,16 @@
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Responsive Menu */
+/* For mobile screens, make the nav links stack vertically */
 .nav-links.open {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 60px; /* Adjust based on navbar height */
   right: 0;
-  background-color: rgb(40, 86, 118);
+  width: 100%;
+  background-color: #2c3e50;
   padding: 1rem;
-  text-align: center;
   z-index: 2;
 }
 
@@ -118,10 +137,10 @@
   margin: 1rem 0;
 }
 
-/* Show hamburger menu on smaller screens */
+/* Mobile view */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Hide nav links on mobile */
+  .navbar .nav-links {
+    display: none; /* Hide links by default on mobile */
   }
 
   .hamburger {
@@ -129,46 +148,6 @@
   }
 
   .nav-links.open {
-    display: block;
-    width: 100%; /* Ensure the nav links take full width on mobile */
-  }
-
-  .nav-links li {
-    text-align: center;
-  }
-
-  .nav-links a {
-    padding: 1rem; /* Make the links bigger and more clickable on mobile */
-    font-size: 1.2rem;
-  }
-}
-
-/* Mobile Menu Adjustments */
-@media (max-width: 480px) {
-  .site-logo {
-    font-size: 2rem; /* Slightly smaller logo text for very small screens */
-  }
-
-  .cta-button {
-    font-size: 1.1rem; /* Slightly smaller CTA button text */
-    padding: 8px 16px; /* Adjust CTA button size for mobile */
-  }
-
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 1.5rem; /* Adjust padding for smaller screen */
-  }
-
-  /* Ensure nav-links are centered on very small screens */
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem; /* Add spacing between nav items */
-  }
-
-  .nav-links li {
-    width: 100%; /* Ensure links take up full width */
-    text-align: center;
+    display: flex; /* Display the links when menu is open */
   }
 }

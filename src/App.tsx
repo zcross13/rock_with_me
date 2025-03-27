@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import NotFound from './pages/Non-Existent';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -18,12 +19,13 @@ function App() {
       <Navbar />
       <div className="container">
         <Routes>
-          <Route path="/about-us" element={<About />} />
           <Route path="/" element={<Home />} />
-          <Route path="/prices" element={<Prices />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/services" element={<Prices />} />
+          <Route path="/gallery" element={<Gallery/>} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
       <Footer />
