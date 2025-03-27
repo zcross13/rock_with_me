@@ -26,8 +26,13 @@ const Navbar = () => {
         <li><Link to="/faq">FAQ</Link></li>
       </ul>
 
-      {/* CTA Button */}
-      <button className="cta-button">Book Appointment</button>
+      <button
+          className="cta-button"
+          onClick={() =>
+            (window.location.href =
+              'https://app.acuityscheduling.com/schedule/057387c0')
+          }
+        > Book Now </button>
     </nav>
   );
 };
