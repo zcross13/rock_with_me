@@ -2,7 +2,7 @@
 
 /* General Navbar Styles */
 .navbar {
-  background-color: #2c3e50;
+  background-color: #004d4d; /* Dark Teal background */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,12 +38,12 @@
 /* Add specific logo styles if needed */
 .logo-business1 a {
   font-family: "Dancing Script", cursive;
-  color: #ff6f61; /* Color for Business 1 */
+  color: #ff6f61; /* Mauve color for Business 1 */
 }
 
 .logo-business2 a {
   font-family: "Dancing Script", cursive;
-  color: #8e44ad; /* Color for Business 2 (adjust as needed) */
+  color: #9b6e7d; /* Mauve color for Business 2 */
 }
 
 /* Navigation Links */
@@ -68,13 +68,13 @@
 }
 
 .nav-links a:hover {
-  background-color: #34495e;
+  background-color: #34495e; /* Silver hover effect */
   border-radius: 4px;
 }
 
 /* CTA Button Styling */
 .cta-button {
-  background-color: #ff6f61; /* Soft, girly color */
+  background-color: #9b6e7d; /* Mauve color for CTA */
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -87,7 +87,7 @@
 }
 
 .cta-button:hover {
-  background-color: #ff8a75; /* Darken on hover */
+  background-color: #8e44ad; /* Darker Mauve on hover */
 }
 
 /* Hamburger Menu */
@@ -128,7 +128,7 @@
   top: 60px; /* Adjust based on navbar height */
   right: 0;
   width: 100%;
-  background-color: #2c3e50;
+  background-color: #004d4d; /* Dark Teal for mobile background */
   padding: 1rem;
   z-index: 2;
 }
