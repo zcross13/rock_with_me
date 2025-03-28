@@ -1,0 +1,102 @@
+/* home.css */
+.business-overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10%;
+  background-color: #f9f9f9;
+}
+
+.business-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  border-left: 8px solid #004d4d; /* Dark Teal left border for accent */
+}
+
+.business-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.business-block:hover {
+  transform: translateY(-10px);
+}
+
+.business-logo-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+  background-color: #9b6e7d; /* Mauve background for the logo box */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.business-logo-box:hover {
+  transform: scale(1.05);
+}
+
+.business-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.business-description-box {
+  flex: 2;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.business-description-box h2 {
+  font-family: "Cinzel", serif;
+  font-size: 36px;
+  color: #004d4d; /* Dark Teal for the title */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.business-description-box p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.business-block:hover .business-description-box h2,
+.business-block:hover .business-description-box p {
+  color: #9b6e7d; /* Mauve hover effect for title and description */
+}
+
+@media (max-width: 768px) {
+  .business-overview {
+    padding: 30px 10%;
+  }
+
+  .business-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .business-logo-box {
+    max-width: 200px;
+  }
+
+  .business-description-box {
+    text-align: center;
+  }
+}

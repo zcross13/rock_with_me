@@ -1,42 +1,47 @@
 import '../styles/home.css';
-
+import rockWMLogo from "../assets/logo.jpeg";
+import dynamicVLogo from "../assets/dynamicVue.png";
 
 const Home = () => {
-  const handleButtonClick = () => {
-    window.location.href = 'https://app.acuityscheduling.com/schedule/057387c0';
-  };
-
   return (
-    <header className="header">
-      {/* Hero Section with Background Image */}
-      <div className="hero" >
-        <div className="hero-overlay">
-          <div className="hero-content">
-            <h1>Experience Cutting-Edge 3D Ultrasound</h1>
-            <p>
-              Booking a 3D/4D ultrasound is an exciting step in your pregnancy journey,
-              offering a unique opportunity to see your baby in remarkable detail. Unlike
-              traditional 2D ultrasounds, 3D ultrasounds provide stunning three-dimensional
-              images, while 4D ultrasounds add the element of motion, allowing you to watch
-              your baby move in real-time. These ultrasounds create a stronger bond with your
-              unborn child and offer a memorable keepsake for your family.
-            </p>
-            <p>You’re just an appointment away from an unforgettable moment!</p>
-
-            {/* Call-to-Action Buttons */}
-            <div className="cta-buttons-container">
-              <button className="cta-button">Call: 832-631-6696</button>
-              <p className="or-text"> OR </p>
-              <button onClick={handleButtonClick} className="cta-button">
-                Book an Appointment
-              </button>
-            </div>
-          </div>
+    <section className="business-overview">
+      {/* Business 1 */}
+      <div className="business-block">
+        <div className="business-logo-box">
+          <img
+            src={rockWMLogo} // Business 1 logo image
+            alt="Business 1 Logo"
+            className="business-logo"
+          />
+        </div>
+        <div className="business-description-box">
+          <h2>Rock With Me in 4D</h2>
+          <p>
+            Our general ultrasound services offer high-quality, non-invasive imaging to assist in your healthcare needs. 
+            Whether it’s for monitoring pregnancy or diagnosing other conditions, we offer reliable results with a personal touch.
+          </p>
         </div>
       </div>
-    </header>
+
+      {/* Business 2 */}
+      <div className="business-block reverse">
+        <div className="business-description-box">
+          <h2>Dynamic Vue Imaging</h2>
+          <p>
+            Experience cutting-edge 3D and 4D ultrasound imaging to see your baby in remarkable detail. Book a session with us 
+            and create lasting memories with a detailed view of your baby in motion.
+          </p>
+        </div>
+        <div className="business-logo-box">
+          <img
+            src={dynamicVLogo} // Business 2 logo image
+            alt="Business 2 Logo"
+            className="business-logo"
+          />
+        </div>
+      </div>
+    </section>
   );
 };
 
 export default Home;
-
