@@ -1,4 +1,4 @@
-import '../styles.css';
+import "../styles/socialMediaLinks.css"
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const SocialMediaLinks = () => {
