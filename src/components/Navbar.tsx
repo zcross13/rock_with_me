@@ -8,22 +8,22 @@ const Navbar = () => {
       <div className="logo-container">
         {/* First Business Logo */}
         <div className="logo logo-business1">
-          <Link to="/">Rock With Me In 4D</Link>
+          <Link to="/" aria-label="Home - Rock With Me In 4D">Rock With Me In 4D</Link>
         </div>
 
         {/* Second Business Logo */}
         <div className="logo logo-business2">
-          <Link to="/">Dyanmic Vue Imaging</Link>
+          <Link to="/" aria-label="Home - Dynamic Vue Imaging">Dyanmic Vue Imaging</Link>
         </div>
       </div>
 
       {/* Navigation Links */}
       <ul className="nav-links">
-        <li><Link to="/about-us">About</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/faq">FAQ</Link></li>
+        <li><Link to="/about-us" aria-label="About me Page">About</Link></li>
+        <li><Link to="/services" aria-label="Services Page">Services</Link></li>
+        <li><Link to="/gallery" aria-label="Gallery Page">Gallery</Link></li>
+        <li><Link to="/contact" aria-label="Contact Page">Contact</Link></li>
+        <li><Link to="/faq" aria-label="FAQ Page">FAQ</Link></li>
       </ul>
 
       <button
