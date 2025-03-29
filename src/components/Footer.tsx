@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="connect-content">
         <h2>Connect With Me</h2>
         <p>
-          We're here to help! Reach out to us through any off the methods below:
+          We're here to help! Reach out to us through any of the methods below:
         </p>
         {/* Contact Infor */}
         <div className="contact-info">
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
         <SocialMediaLinks />
         {/* Inquiry Form */}
-        <div className="inquiry-form">
+        {/* <div className="inquiry-form">
           <h3> Send Us a Message</h3>
           <form>
             <input type="text" placeholder="Your Name" required />
@@ -32,7 +32,7 @@ const Footer = () => {
               Submit
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   );
