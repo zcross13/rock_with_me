@@ -36,7 +36,7 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <li><Link to="/about-us" aria-label="About me Page" onClick={() => setIsOpen(false)}>About</Link></li>
+        <li><Link to="/about-us" aria-label="About me Page" onClick={() => setIsOpen(false)}>About Me</Link></li>
         <li><Link to="/services" aria-label="Services Page" onClick={() => setIsOpen(false)}>Services</Link></li>
         <li><Link to="/gallery" aria-label="Gallery Page" onClick={() => setIsOpen(false)}>Gallery</Link></li>
         <li><Link to="/contact" aria-label="Contact Page"  onClick={() => setIsOpen(false)}>Contact</Link></li>

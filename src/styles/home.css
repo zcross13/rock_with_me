@@ -90,6 +90,7 @@
   .business-block {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
   }
 
   .business-logo-box {
@@ -98,5 +99,17 @@
 
   .business-description-box {
     text-align: center;
+  }
+
+  .business-block.business-block.reverse {
+    flex-direction: column-reverse;
+  }
+
+  .business-description-box h2 {
+    font-size: 28px;
+  }
+
+  .business-block-box p {
+    font-size: 16px;
   }
 }
