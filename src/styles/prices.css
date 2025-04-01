@@ -128,7 +128,7 @@
 .cta-container {
   display: flex;
   justify-content: center; /* Center the button */
-  margin-top: 4rem; /* Increased space before CTA */
+  margin-top: 2rem; /* Increased space before CTA */
   width: 100%;
   align-items: center;
 }
