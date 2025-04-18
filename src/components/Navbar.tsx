@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/navbar.css';
+import clearLogo from "../assets/clearLogo.png"
 
 const Navbar = () => {
 
@@ -14,18 +15,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Container for both logos */}
-      <div className="logo-container">
-        {/* First Business Logo */}
-        <div className="logo logo-business1">
-          <Link to="/" aria-label="Home - Rock With Me In 4D">Rock With Me In 4D</Link>
+        <div className="logo">
+        <NavLink to="/" aria-label="Home - Rock With Me In 4D">
+          <img src={clearLogo} alt="Rock With Me in 4D Logo" className='logo-img'/>
+        </NavLink>
         </div>
 
-        {/* Second Business Logo */}
-        <div className="logo logo-business2">
-          <Link to="/" aria-label="Home - Dynamic Vue Imaging">Dyanmic Vue Imaging</Link>
-        </div>
-      </div>
 
       {/* Hamburger Menu */}
       <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
@@ -36,11 +31,11 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <li><Link to="/about-us" aria-label="About me Page" onClick={() => setIsOpen(false)}>About Me</Link></li>
-        <li><Link to="/services" aria-label="Services Page" onClick={() => setIsOpen(false)}>Services</Link></li>
-        <li><Link to="/gallery" aria-label="Gallery Page" onClick={() => setIsOpen(false)}>Gallery</Link></li>
-        <li><Link to="/contact" aria-label="Contact Page"  onClick={() => setIsOpen(false)}>Contact</Link></li>
-        <li><Link to="/faq" aria-label="FAQ Page" onClick={() => setIsOpen(false)}>FAQ</Link></li>
+        <li><NavLink to="/about-us" aria-label="About me Page" onClick={() => setIsOpen(false)} className="active-link">About Me</NavLink></li>
+        <li><NavLink to="/services" aria-label="Dynamic Vue" onClick={() => setIsOpen(false)} className="active-link">Dyanmic Vue Imaging</NavLink></li>
+        <li><NavLink to="/gallery" aria-label="Gallery Page" onClick={() => setIsOpen(false)} className="active-link">Gallery</NavLink></li>
+        <li><NavLink to="/contact" aria-label="Contact Page"  onClick={() => setIsOpen(false)} className="active-link">Contact</NavLink></li>
+        <li><NavLink to="/faq" aria-label="FAQ Page" onClick={() => setIsOpen(false)} className="active-link">FAQ</NavLink></li>
         <li>
         <button
           className="cta-button"
