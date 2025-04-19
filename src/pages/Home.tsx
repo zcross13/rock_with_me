@@ -7,16 +7,18 @@ const Home = () => {
     <div className='homepage'>
       {/* Hero Section */}
       <section className="hero">
+      <h1>See Your Baby Like Never Before</h1>
+      <div className='hero-container'>
           <img
             src={rockWMLogo} // Business 1 logo image
             alt="Rock With me in 4D Logo"
             className="hero-logo"
           />
-          <h1>See Your Baby Like Never Before</h1>
           <p>
             Experience cutting-edge 3D and 4D ultrasound imaging to see your baby in remarkable detail. Book a session with us 
             and create lasting memories with a detailed view of your baby in motion.
         </p>
+     </div>
       </section>
       
       {/*Feature Cards */}
