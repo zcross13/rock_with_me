@@ -1,115 +1,107 @@
-/* home.css */
-.business-overview {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 10%;
-  background-color: #f9f9f9;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.business-block {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  width: 100%;
+.homepage {
   max-width: 1200px;
-  background: #fff;
-  padding: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  border-left: 8px solid #004d4d; /* Dark Teal left border for accent */
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.business-block.reverse {
-  flex-direction: row-reverse;
+/*Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 1.5rem;
+  background-color: #ffffff; /* Optional: Make sure the background is clean */
 }
 
-.business-block:hover {
-  transform: translateY(-10px);
+.hero-logo {
+  width: 200px;
+  border-radius: 50%;
 }
 
-.business-logo-box {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 250px;
-  background-color: #9b6e7d; /* Mauve background for the logo box */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.business-logo-box:hover {
-  transform: scale(1.05);
-}
-
-.business-logo {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 5px;
-}
-
-.business-description-box {
-  flex: 2;
-  padding-left: 20px;
-  text-align: left;
-}
-
-.business-description-box h2 {
-  font-family: "Dancing Script", serif;
-  font-size: 36px;
-  color: #004d4d; /* Dark Teal for the title */
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.business-description-box p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  color: #666;
-  line-height: 1.6;
+.hero p {
   max-width: 600px;
+  margin: 1rem auto 2rem;
+  line-height: 1.6;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #333;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.business-block:hover .business-description-box h2,
-.business-block:hover .business-description-box p {
-  color: #9b6e7d; /* Mauve hover effect for title and description */
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
-  .business-overview {
-    padding: 30px 10%;
-  }
+.feature-card:hover {
+  transform: translateY(-5px);
+}
 
-  .business-block {
+.feature-card {
+  background-color: #f0f0f0;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.features-section {
+  padding: 3rem 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #006283;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+.view-all-services {
+  text-align: center;
+}
+
+.view-all-services .cta-button {
+  background-color: #006283;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h1,
+h3 {
+  font-weight: 600;
+}
+p {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .features {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
   }
 
-  .business-logo-box {
-    max-width: 200px;
+  .feature-card {
+    width: 90%;
   }
 
-  .business-description-box {
-    text-align: center;
-  }
-
-  .business-block.business-block.reverse {
-    flex-direction: column-reverse;
-  }
-
-  .business-description-box h2 {
-    font-size: 28px;
-  }
-
-  .business-block-box p {
-    font-size: 16px;
+  .view-all-services .cta-button {
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 1rem;
   }
 }
