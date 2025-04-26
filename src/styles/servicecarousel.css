@@ -84,6 +84,12 @@
 }
 
 /* Style for Swiper navigation buttons  */
+
+.swiper-wrapper-container {
+  position: relative;
+  padding: 0 50px;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: #006283;
@@ -91,15 +97,31 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  top: 40%;
+  
+
+  top: 50%;
   transform: translateY(-50%);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background: #004e66;
   color: #fff;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-disables {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -110,8 +132,21 @@
     font-size: 1.75rem;
   }
 
-  .swiper-button-next .swiper-button-prev {
+  .swiper-wrapper-container {
+    padding: 0 20px;
+  }
+  
+  .swiper-button-next 
+  .swiper-button-prev {
     width: 30px;
     height: 30px;
+  }
+
+  .swiper-button-next {
+    right: 5px;
+  }
+
+  .swiper-button-prev {
+    left: 5px;
   }
 }
