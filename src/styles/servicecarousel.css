@@ -84,6 +84,7 @@
 }
 
 /* Style for Swiper navigation buttons  */
+
 .swiper-wrapper-container {
   position: relative;
   padding: 0 50px;
@@ -96,6 +97,8 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  
+
   top: 50%;
   transform: translateY(-50%);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -132,8 +135,9 @@
   .swiper-wrapper-container {
     padding: 0 20px;
   }
-
-  .swiper-button-next .swiper-button-prev {
+  
+  .swiper-button-next 
+  .swiper-button-prev {
     width: 30px;
     height: 30px;
   }

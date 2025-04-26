@@ -68,45 +68,42 @@ const ServiceCarousel = () => {
     return (
         <section className="service-carousel">
             <h2 className="carousel-heading">Our Ultrasound Services</h2>
-            <div className="swiper-wrapper-container">
-                <Swiper
-                    slidesPerView={1}
-                    spaceBetween={20}
-                    navigation={true}
-                    modules={[ Navigation]}
-                    breakpoints={{
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 }
-                    }}
-                >
-                    {services.map((service, index) => (
-                        <SwiperSlide key={index}>
-                            <div className="carousel-card">
-                                <h3>{service.title}</h3>
-                                <p className="price">{service.price}</p>
-                                {service.timing && <p><strong>Timing:</strong> {service.timing}</p>}
-                                {service.offer && <p><strong>What We Offer:</strong> {service.offer}</p>}
-                                {service.list && (
+            <Swiper
+                slidesPerView={1}
+                spaceBetween={20}
+                navigation={true}
+                modules={[ Navigation]}
+                breakpoints={{
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 }
+                }}
+            >
+                {services.map((service, index) => (
+                    <SwiperSlide key={index}>
+                        <div className="carousel-card">
+                            <h3>{service.title}</h3>
+                            <p className="price">{service.price}</p>
+                            {service.timing && <p><strong>Timing:</strong> {service.timing}</p>}
+                            {service.offer && <p><strong>What We Offer:</strong> {service.offer}</p>}
+                            {service.list && (
+                                <ul>
+                                    {service.list.map((item, idx) => <li key={idx}>{item}</li>)}
+                                </ul>
+                            )}
+                            {service.extraList && (
+                                <>
+                                    <p><strong>What We Offer:</strong></p>
                                     <ul>
-                                        {service.list.map((item, idx) => <li key={idx}>{item}</li>)}
+                                        {service.extraList.map((item, idx) => <li key={idx}>{item}</li>)}
                                     </ul>
-                                )}
-                                {service.extraList && (
-                                    <>
-                                        <p><strong>What We Offer:</strong></p>
-                                        <ul>
-                                            {service.extraList.map((item, idx) => <li key={idx}>{item}</li>)}
-                                        </ul>
-                                    </>
-                                )}
-                                {service.extra && <p>{service.extra}</p>}
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+                                </>
+                            )}
+                            {service.extra && <p>{service.extra}</p>}
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </section>
     );
 }
-
 export default ServiceCarousel;
