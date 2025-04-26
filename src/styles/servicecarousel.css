@@ -1,0 +1,148 @@
+.service-carousel {
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.carousel-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #006283;
+  font-weight: 600;
+}
+
+.swiper {
+  padding-bottom: 3rem;
+}
+
+.carousel-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.carousel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #006283;
+}
+
+.carousel-card .price {
+  font-weight: bold;
+  color: #004e66;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.carousel-card p {
+  margin-bottom: 0.75rem;
+  color: #333;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.carousel-card strong {
+  color: #004e66;
+}
+
+/*Lists inside cards*/
+.carousel-card ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-card ul li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+/* Swipper Pagination */
+.swiper-pagination-bullets {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #006283;
+}
+
+/* Style for Swiper navigation buttons  */
+.swiper-wrapper-container {
+  position: relative;
+  padding: 0 50px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #006283;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #004e66;
+  color: #fff;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-disables {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    padding: 1.5rem;
+  }
+  .carousel-heading {
+    font-size: 1.75rem;
+  }
+
+  .swiper-wrapper-container {
+    padding: 0 20px;
+  }
+
+  .swiper-button-next .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-next {
+    right: 5px;
+  }
+
+  .swiper-button-prev {
+    left: 5px;
+  }
+}
