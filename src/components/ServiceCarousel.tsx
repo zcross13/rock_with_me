@@ -106,5 +106,4 @@ const ServiceCarousel = () => {
         </section>
     );
 }
-
 export default ServiceCarousel;
