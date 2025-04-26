@@ -20,4 +20,5 @@ export default defineConfig({
     // Optionally configure build options here
     outDir: "dist", // Define the output directory
   },
+  base: "./",
 });
