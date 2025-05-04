@@ -7,7 +7,7 @@ import NotFound from './pages/Non-Existent';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
-import Terms from './pages/Terms';
+import Terms from "./pages/Terms";
 import DynamicVue from './pages/DynamicVue';
 
 function App() {
