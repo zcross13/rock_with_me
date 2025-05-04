@@ -16,7 +16,7 @@ import '../styles/servicecarousel.css'; // your custom CSS
 const services = [
     {
         title: "Confirm the Pregnancy",
-        price: "$60/ each additional baby $20",
+        price: "$75/ each additional baby $20",
         timing: "6-14 weeks, 15 minutes",
         offer: "Confirm pregnancy, view baby heartbeat, discover baby size, and provide due date estimate.",
         extra: "Optional Blood Test: Add for $129 (2-3 days) or $149 (next day)",
@@ -27,8 +27,8 @@ const services = [
         timing: "15-39 weeks, 10-minute scan",
         offer: "Find out your baby's gender",
         list: [
-            "Heartbeat stuffed animal"
-        ],
+            "Heartbeat stuffed animal available for an additional cost"
+        ]
     },
     {
         title: "Let's Take a Peek",
@@ -57,7 +57,7 @@ const services = [
         extra: "Additional Baby: $25 each",
     },
     {
-        title: "Last Look!",
+        title: "Last Hoorah!",
         price: "Pricing upon request",
         timing: "38 weeks and beyond (no rescans offered)",
         offer: "A final look at your baby's position, heartbeat, and an attempt at 3D/4D images.",
@@ -68,6 +68,7 @@ const ServiceCarousel = () => {
     return (
         <section className="service-carousel">
             <h2 className="carousel-heading">Our Ultrasound Services</h2>
+            <div className='carousel-wrapper'>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={20}
@@ -103,6 +104,7 @@ const ServiceCarousel = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            </div>
         </section>
     );
 }

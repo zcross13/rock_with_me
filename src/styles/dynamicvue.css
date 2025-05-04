@@ -1,0 +1,212 @@
+/* General Styles */
+.prices-page {
+  padding: 4rem; /* Increased padding for more breathing room */
+  text-align: center;
+  background-color: #f5f5f5; /* Light silver background */
+  display: flex;
+  flex-wrap: wrap; /* Wrap the content on desktop */
+  gap: 4rem; /* Larger gap between sections */
+  justify-content: center; /* Center sections horizontally */
+}
+
+.prices-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem; /* Space between the logo and the text */
+  padding: 2rem;
+}
+
+.business-banner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 15px 0; /* Increased padding */
+  gap: 2rem; /* Adds space between the image and text */
+}
+
+.business-logo {
+  width: 200px; /* Increased logo size */
+  height: auto;
+  object-fit: contain;
+  margin-right: 2rem; /* Adds space between the logo and text */
+}
+
+.header-text {
+  text-align: left;
+}
+
+.header-text h1 {
+  font-size: 3rem; /* Increased font size for better readability */
+  margin-bottom: 1.5rem; /* Increased margin for spacing */
+  color: #005f5f; /* Dark Teal */
+  font-family: "Poppins", sans-serif; /* Elegant font */
+}
+
+.header-text p {
+  font-size: 1.4rem; /* Larger font size for better readability */
+  color: #8e8e8e; /* Soft silver gray */
+  margin-bottom: 3rem; /* Increased margin for spacing */
+  font-family: "Arial", sans-serif;
+}
+
+/* Layout for the Business Section */
+.business-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 50px; /* Centers the section horizontally */
+  padding: 3rem;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Arrange the content in a column */
+  align-items: center; /* Horizontally center the content */
+}
+
+.business-header h2 {
+  font-size: 2.5rem; /* Larger font size for desktop */
+  color: #9b4d57; /* Mauve */
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif; /* Elegant font */
+}
+
+/* Services List Styling */
+.services-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #333;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center each item horizontally */
+  width: 100%; /* Ensure the list takes full width of the section */
+}
+
+.services-list li {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-align: center; /* Center the text of each list item */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.services-list strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #005f5f;
+  margin-bottom: 0.3rem;
+}
+
+/* CTA Button Styling */
+/* CTA Button Styling */
+.cta-container {
+  display: flex;
+  flex-direction: column; /* Stack the button and link vertically */
+  justify-content: center; /* Center the content */
+  margin-top: 2rem; /* Increased space before CTA */
+  width: 100%;
+  text-align: center; /* Center-align text and link */
+}
+
+.cta-button {
+  background-color: #9b4d57; /* Mauve color */
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #b56a73; /* Slightly darker mauve on hover */
+  transform: scale(1.1); /* Slightly larger hover effect */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:active {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta-link {
+  font-size: 1.2rem; /* Slightly larger text for visibility */
+  color: #005f5f; /* Matching the theme color */
+  margin-top: 1rem; /* Adds space between the button and the link */
+}
+
+.cta-link a {
+  color: #9b4d57; /* Mauve color for the link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-link a:hover {
+  text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Responsive Design for Large Screens (Desktop) */
+@media (min-width: 1024px) {
+  .prices-page {
+    flex-direction: row; /* Arrange the content side-by-side */
+    justify-content: center; /* Center the content */
+  }
+
+  .business-section {
+    width: 100%; /* Full width for one business */
+  }
+
+  .prices-header {
+    flex-direction: row; /* Arrange header content side-by-side */
+    justify-content: flex-start; /* Align text and logo to the left */
+    text-align: left;
+  }
+
+  .header-text {
+    max-width: 600px; /* Optional to limit text width */
+  }
+}
+
+/* Responsive Design for Small Screens (Tablets/Mobile) */
+@media (max-width: 768px) {
+  .prices-page {
+    padding: 2rem 1rem;
+  }
+
+  .business-section {
+    width: 100%;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .prices-header {
+    flex-direction: column; /* Stack logo and text vertically on mobile */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .prices-header h1 {
+    font-size: 2rem;
+  }
+
+  .prices-header p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .business-logo {
+    width: 100px;
+  }
+}

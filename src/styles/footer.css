@@ -1,114 +1,95 @@
-/* Connect Section */
-.connect {
-  padding: 3rem 0;
-  background-color: #f4f4f4; /* Light background to differentiate the section */
+.footer-container {
+  background-color: #111; /* Dark background for contrast */
+  color: #f1f1f1;
+  padding: 2rem;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.connect-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.footer-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+.social-media-link {
+  margin-bottom: 1rem;
 }
 
-.contact-item {
-  flex: 1;
-  min-width: 250px;
+.logo-img {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  margin-top: 0.5rem;
 }
 
-.inquiry-form {
-  margin-top: 2rem;
+.footer-description h2 {
+  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
-.inquiry-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
+.footer-description p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc;
 }
 
-.inquiry-form input,
-.inquiry-form textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.footer-links h3 {
+  margin-bottom: 10px;
+  color: #fff;
 }
 
-.inquiry-form button {
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.booking-btn {
+  margin-top: 15px;
   padding: 10px 20px;
-  background-color: rgb(205, 123, 158);
-  color: white;
+  background-color: #f1f1f1;
+  color: #111;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.inquiry-form button:hover {
-  background-color: rgb(0, 128, 128);
+.booking-btn:hover {
+  background-color: #e2e2e2;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact-info {
-    flex-direction: column; /* Stack contact items vertically */
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-
-  .contact-item {
-    min-width: 100%; /* Ensure contact items take full width on smaller screens */
-    flex: 1;
-  }
-
-  .inquiry-form form {
-    max-width: 100%;
-    padding: 0 1rem; /* Add padding for form on mobile */
-  }
-
-  .inquiry-form input,
-  .inquiry-form textarea {
-    padding: 12px;
-    font-size: 0.95rem;
-  }
-
-  .inquiry-form button {
-    padding: 12px 24px;
-    font-size: 1rem;
-  }
-}
-
-/* Extra Small Devices (phones in portrait mode) */
-@media (max-width: 480px) {
-  .contact-info {
-    gap: 1rem; /* Reduce gap between items */
-    margin-top: 1rem;
-  }
-
-  .contact-item {
-    min-width: 100%;
-    flex: 1;
-  }
-
-  .inquiry-form form {
-    padding: 0 1rem;
-  }
-
-  .inquiry-form input,
-  .inquiry-form textarea {
-    padding: 12px;
-    font-size: 0.9rem;
-  }
-
-  .inquiry-form button {
-    padding: 12px 20px;
-    font-size: 0.95rem;
-  }
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #888;
 }
