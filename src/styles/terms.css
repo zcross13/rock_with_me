@@ -94,3 +94,24 @@ p small {
   font-size: 0.9em;
   color: #888;
 }
+
+@media (max-width: 768px) {
+  .terms-page-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    overflow-wrap: break-word;
+  }
+
+  .terms-page-content {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  p,
+  li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}

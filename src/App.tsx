@@ -1,3 +1,4 @@
+import "./styles/global.css"
 import About from './pages/About-me';
 import FAQ from './pages/FAQ';
 import Home from './pages/Home';
@@ -9,6 +10,7 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import Terms from "./pages/Terms";
 import DynamicVue from './pages/DynamicVue';
+
 
 function App() {
   return (
